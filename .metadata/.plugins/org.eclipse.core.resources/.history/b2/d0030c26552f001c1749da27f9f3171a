@@ -37,12 +37,10 @@ public class Program {
 			
 			String erro = reservetion.updateDates(checkin, checkiout);
 			if (erro != null) {
-				System.out.println("Erro in reservation: " + erro);
+				System.out.println("Erro: " + erro);
 			}
-			else {
-				System.out.println("Reservation: " + reservetion);
-			}
-									
+			System.out.println("Erro " + reservetion);
+						
 		}
 		
 		sc.close();		

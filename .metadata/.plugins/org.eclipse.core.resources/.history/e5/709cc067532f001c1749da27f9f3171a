@@ -47,17 +47,15 @@ public class Reservation {
 		
 		Date now = new Date();
 		
-		if (checkin.before(now) || checkout.before(now)) {
+		if (checkin.before(now) || checkiout.before(now)) {
 			return "Error in reservation: Reservation dates for update must be future date";
 		} 
-		if (!checkout.after(checkin)) {
+		if (!checkiout.after(checkin)) {
 			return "Error in reservation: Check-out date must be after check-in date";
 		}
 		
 		this.checkin = checkin;
 		this.checkout = checkout;
-		
-		return null;
 	}
 	
 	@Override
